@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尾牙車聚-問卷調查表單</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-radio-group {
+            display: flex;
+            max-width: 400px;
+            margin-bottom: 1.5rem;
+        }
+
+        .custom-radio {
+            display: inline-block;
+            flex: 1;
+            text-align: center;
+            /* margin: 0 5px;  */
+        }
+
+        .custom-radio input[type="radio"] {
+            display: none;
+        }
+
+
+        .custom-radio label {
+            display: block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            border: 2px solid #f8f9fa;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+            font-size: 16px;
+            /* border-left-color: transparent;
+            border-right-color: transparent; */
+            border-color: transparent;
+        }
+
+        /* 第一個選項 */
+        .custom-radio:first-child label {
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-left: 2px solid #f8f9fa; /* 恢復左側邊框 */
+        }
+
+        /* 最後一個選項 */
+        .custom-radio:last-child label {
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-right: 2px solid #f8f9fa; /* 恢復右側邊框 */
+        }
+
+        .custom-radio label:hover {
+            border-color: #0d6efd;
+        }
+
+        .custom-radio input[type="radio"]:checked + label {
+            background-color: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+        }
+    </style>
+
+
+    <style>
+        /* Slider container to ensure consistency */
+        #photoCarousel .carousel-inner {
+            width: 100%;
+            overflow: hidden; /* Ensure no overflow */
+        }
+
+        #photoCarousel .carousel-item img {
+            width: 100%; /* Image stretches horizontally */
+            height: 100%; /* Image stretches vertically */
+            object-fit: cover; /* Preserve aspect ratio while filling the container */
+            object-position: center; /* Center the image */
+            border-radius: 20px; /* Add rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex flex-column">
+            <!-- 左側圖片 -->
+            <div class="d-flex flex-column flex-md-row align-items-center">
+                <img src="./img/2024-11-19_231529.jpg" class="img-fluid" style="width: 40%;" alt="尾牙車聚活動圖片">
+
+                <!-- Slider Section -->
+                <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slider items will be dynamically inserted here -->
+                    </div>
+                    <!-- Left and right controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        
+            <!-- 右側文字內容 -->
+            <div class="p-3">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <h1 class="mt-3">尾牙車聚</h1>
+                    <h2 class="mb-2">2024/01/05 (日)</h2>
+                    <h2 class="mb-2">尖山埤渡假村 桂花園中餐廳</h2>
+                </div>
+        
+                <p>
+                    <strong><h4>園區內活動有：</h4></strong>
+                    <ul class="ms-4">
+                        <li>水彈 350元/人，時間30分鐘 (500發)</li>
+                        <li>獨木舟雙人 500元，限原腳踏船區</li>
+                        <li>DIY：
+                            <ul class="ms-4">
+                                <li>貓頭鷹種子 150元/人</li>
+                                <li>烤畫 150元/人，時間1小時（優惠：120元/人）</li>
+                            </ul>
+                        </li>
+                        <li>導覽套裝 (含導覽遊湖遊園門票)：250元/人，時間約1.5小時（3歲以下：125元）。100人可分3隊</li>
+                        <li>遊園車來回 50元/人。遊湖船 100元/人。（3歲以下：車30元, 船60元）</li>
+                    </ul>
+                </p>
+        
+                <p>
+                    <strong><h4>注意：</h4></strong>
+                    <ul class="ms-4">
+                        <li>以上費用入園後有興趣的請自行購票遊園（如果與現場價格不一樣，依現場為主）。</li>
+                    </ul>
+                </p>
+        
+                <p>
+                    <strong><h4>報名時間：</h4></strong>
+                    <ul class="ms-4">
+                        <li>即日起～12/1，匯款時間12/4～12/10，匯款完畢後取消不參加則不退費（因為合菜是訂桌數，退費影響其他人費用，請見諒）。</li>
+                        <li>
+                            費用算法如下（以家庭計算）：
+                            <ul class="ms-4">
+                                <li>2小算1大</li>
+                                <li>1小免費</li>
+                                <li>1中算大</li>
+                                <li>兒童免費</li>
+                                <li>1小1兒童免費</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
+        
+                <p>
+                    <strong><h4>入場時間：</h4></strong>
+                    <ul class="ms-4">
+                        <li>1/5 早上10點開始入場，中午12點開始用餐。</li>
+                        <li>其餘時間大家可以帶小孩四處走走或者與車友交流。</li>
+                    </ul>
+                </p>
+        
+                <p>
+                    <strong><h4>備註：</h4></strong>
+                    <ul class="ms-4">
+                        <li>下方勾選後，填寫完畢送出會回傳一份您填寫資料，讓您確認，避免人數錯誤造成後續作業疏失。</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        
+        
+        <h1 class="mb-4">問卷調查</h1>
+        <form id="surveyForm">
+            <!-- 真實姓名 -->
+            <div class="mb-3">
+                <label for="name" class="form-label"><h5>真實姓名 (例如：王曉明) *</h5></label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="您的回答" required>
+            </div>
+
+            <!-- 電話 -->
+            <div class="mb-3">
+                <label for="phone" class="form-label"><h5>電話 (例如：09123456789) *</h5></label>
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="您的回答" required>
+            </div>
+
+            <!-- 車牌 -->
+            <div class="mb-3">
+                <label for="licensePlate" class="form-label"><h5>車牌 (例如：ABC-1234) *</h5></label>
+                <input type="text" class="form-control" id="licensePlate" name="licensePlate" placeholder="您的回答" required>
+            </div>
+
+            <!-- LINE 名稱 -->
+            <div class="mb-3">
+                <label for="lineName" class="form-label"><h5>LINE 名稱 (真實名稱，例如：小明) *</h5></label>
+                <input type="text" class="form-control" id="lineName" name="lineName" placeholder="您的回答" required>
+            </div>
+
+            <!-- 車輛數量 -->
+            <h5 class="mb-3">車輛數量 (停車費50元/台) *</h5>
+            <div class="custom-radio-group">
+                <div class="custom-radio">
+                    <input type="radio" id="carCount1" name="carCount" value="1" required>
+                    <label for="carCount1">1</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="carCount2" name="carCount" value="2">
+                    <label for="carCount2">2</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="carCount3" name="carCount" value="3">
+                    <label for="carCount3">3</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="carCount4" name="carCount" value="4">
+                    <label for="carCount4">4</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="carCount5" name="carCount" value="5">
+                    <label for="carCount5">5</label>
+                </div>
+            </div>
+
+            <!-- 大人數 -->
+            <h5 class="mb-3">大人 (國中以上包含) 人數 *</h5>
+            <div class="custom-radio-group">
+                <div class="custom-radio">
+                    <input type="radio" id="adults1" name="adults" value="1" required>
+                    <label for="adults1">1</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="adults2" name="adults" value="2">
+                    <label for="adults2">2</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="adults3" name="adults" value="3">
+                    <label for="adults3">3</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="adults4" name="adults" value="4">
+                    <label for="adults4">4</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="adults5" name="adults" value="5">
+                    <label for="adults5">5</label>
+                </div>
+            </div>
+
+            <!-- 國小人數 -->
+            <h5 class="mb-3">國小人數 *</h5>
+            <div class="custom-radio-group">
+                <div class="custom-radio">
+                    <input type="radio" id="childrenAbovePrimary1" name="childrenAbovePrimary" value="1" required>
+                    <label for="childrenAbovePrimary1">1</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="childrenAbovePrimary2" name="childrenAbovePrimary" value="2">
+                    <label for="childrenAbovePrimary2">2</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="childrenAbovePrimary3" name="childrenAbovePrimary" value="3">
+                    <label for="childrenAbovePrimary3">3</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="childrenAbovePrimary4" name="childrenAbovePrimary" value="4">
+                    <label for="childrenAbovePrimary4">4</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="childrenAbovePrimary5" name="childrenAbovePrimary" value="5">
+                    <label for="childrenAbovePrimary5">5</label>
+                </div>
+            </div>
+
+            <!-- 國小以下人數 -->
+            <h5 class="mb-3">國小以下人數 *</h5>
+            <div class="custom-radio-group">
+                <div class="custom-radio">
+                    <input type="radio" id="childrenBelowPrimary1" name="childrenBelowPrimary" value="1" required>
+                    <label for="childrenBelowPrimary1">1</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="childrenBelowPrimary2" name="childrenBelowPrimary" value="2">
+                    <label for="childrenBelowPrimary2">2</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="childrenBelowPrimary3" name="childrenBelowPrimary" value="3">
+                    <label for="childrenBelowPrimary3">3</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="childrenBelowPrimary4" name="childrenBelowPrimary" value="4">
+                    <label for="childrenBelowPrimary4">4</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="childrenBelowPrimary5" name="childrenBelowPrimary" value="5">
+                    <label for="childrenBelowPrimary5">5</label>
+                </div>
+            </div>
+
+            <!-- 兒童椅人數 -->
+            <h5 class="mb-3">兒童椅人數 *</h5>
+            <div class="custom-radio-group">
+                <div class="custom-radio">
+                    <input type="radio" id="infants1" name="infants" value="1" required>
+                    <label for="infants1">1</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="infants2" name="infants" value="2">
+                    <label for="infants2">2</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="infants3" name="infants" value="3">
+                    <label for="infants3">3</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="infants4" name="infants" value="4">
+                    <label for="infants4">4</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="infants5" name="infants" value="5">
+                    <label for="infants5">5</label>
+                </div>
+            </div>
+
+            
+            <!-- 兒童椅人數 -->
+            <h5 class="mb-3">吃飯時小孩有無坐推車在旁邊 *</h5>
+            <div class="custom-radio-group">
+                <div class="custom-radio">
+                    <input type="radio" id="settingby1" name="settingby" value="Yes" required>
+                    <label for="settingby1">有</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" id="settingby2" name="settingby" value="No">
+                    <label for="settingby2">無</label>
+                </div>
+            </div>
+
+            <!-- 最後訊息 -->
+            <div class="text-center mb-3">
+                <p>最後，尾牙費用為合菜(一桌5500)，因此人數決定每個人費用，這邊先統計人數，後續再告知大家費用</p>
+            </div>
+
+            <div class="text-center mb-3">
+                <p>為了方便大家討論，因此另外開了臨時line群組，再麻煩大家填寫完畢後加入，連結如下</p>
+                <p><a target="_blank" href="https://line.me/R/ti/g/wkdkmtUU2p"><img src="./img/LineQRCode.png" width="100px" height="100px"  alt=""></a>       點擊Qrcode加入Line群組</p>
+                    
+            </div>
+
+            <!-- 提交按鈕 -->
+             <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">提交</button>
+            </div>
+            <div class="footer" style="height: 100px;">
+                
+            </div>
+        </form>
+    </div>
+    <script>
+        // JavaScript to dynamically load images from the photo folder
+        document.addEventListener("DOMContentLoaded", function () {
+            const photoFolder = './photo/';
+            const imageNames = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg', 'photo4.jpg', 'photo5.jpg', 'photo6.jpg', 'photo7.jpg']; // Replace with actual image filenames in ./photo
+            const carouselInner = document.querySelector('#photoCarousel .carousel-inner');
+    
+            imageNames.forEach((imageName, index) => {
+                const carouselItem = document.createElement('div');
+                carouselItem.className = `carousel-item${index === 0 ? ' active' : ''}`;
+                carouselItem.innerHTML = `<img src="${photoFolder}${imageName}" class="d-block w-100" alt="Photo ${index + 1}">`;
+                carouselInner.appendChild(carouselItem);
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById('surveyForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // 防止表單的默認提交行為
+
+            const formData = new FormData(this);
+
+            // 將表單資料轉換為 URL 參數
+            const queryParams = new URLSearchParams();
+            formData.forEach((value, key) => {
+                queryParams.append(key, value);
+            });
+            
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby02DmtNFKQZJTy0ToZodAke04iN1I1mEQwUUXKEm5XleWAGEMHnmLu-B1JixtlVlQJ/exec';
+            // 發送資料到 Google Apps Script
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(() => {
+                    // 成功後跳轉到 done.html，並附帶用戶輸入的資料
+                    window.location.href = `done.html?${queryParams.toString()}`;
+                })
+                .catch(error => {
+                    console.error('提交失敗：', error);
+                    alert('提交失敗，請稍後再試！');
+                });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
